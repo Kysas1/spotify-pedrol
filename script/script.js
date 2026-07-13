@@ -31,7 +31,6 @@ function playSong (){
     isPlaying = true ; 
 } 
 
-
 function pauseSong (){ 
     play.querySelector('.bi').classList.add('bi-play-circle-fill');
     play.querySelector('.bi').classList.remove('bi-pause-circle-fill');
