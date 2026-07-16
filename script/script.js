@@ -3,7 +3,12 @@ let play = document.getElementById('play')
 let audio = document.getElementById('audio');
 let bandName = document.getElementById('band-name')
 let cover = document.getElementById('cover')
+let next = document.getElementById('next')
+let prev = document.getElementById('prev')
+let progress = document.getElementById('current-progress')
+let progressContainer = document.getElementById('progress-container')
 let isPlaying = false ;
+
 let katyperry = {
     songName : 'The One That Got Away',
     artist : 'Katy Perry',
@@ -23,7 +28,7 @@ let mj = {
     image : '28f5bc624ebe2476a3fbb4ffddd9e45e6526115228fc9'
 };
 let playlist = [katyperry, sonic, mj];
-let index = 0;
+let index = 2;
 function playSong (){ 
     play.querySelector('.bi').classList.remove('bi-play-circle-fill');
     play.querySelector('.bi').classList.add('bi-pause-circle-fill');
@@ -50,8 +55,47 @@ function initializeSong(){
     bandName.textContent = `${playlist[index].artist}`;
     audio.src = `songs/${playlist[index].file}.mp3`;
 }
+
+function previ(){
+    if (index === 0){
+       index = playlist.length ; 
+    } else {
+        index -= 1 ;
+    }
+    initializeSong();
+    playSong();
+    
+}
+function nextS (){
+    if (index === playlist.length - 1) {
+        index = 0 ; 
+    } else {
+        index += 1;
+    }
+    initializeSong();
+    playSong();
+}
+
+function progressBar(){
+    let barWidth = (audio.currentTime/ audio.duration*100) ;
+    progress.style.setProperty('--progress', `${barWidth}%`);
+}
+
+function jumpTo(event){
+    let width = progressContainer.clientWidth;
+    let clickPosition = event.offsetX;
+    const jumpTotime = (clickPosition / width) * audio.duration ; 
+    audio.currentTime = jumpTotime;
+    progressContainer.style.cursor = 'pointer';
+}
+
 initializeSong();
-play.addEventListener('click', playpauseDecider)
+progressContainer.addEventListener('click', jumpTo);
+play.addEventListener('click', playpauseDecider);
+prev.addEventListener('click' , previ);
+next.addEventListener('click', nextS);
+audio.addEventListener('timeupdate', progressBar);
+
 
 
 
