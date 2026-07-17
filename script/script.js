@@ -93,7 +93,7 @@ function initializeSong(){
             cover.style.transition = '18s';
             document.body.classList.add('dragon-ball');
             cover.style.width = '700px' ;
-            document.getElementById('title').textContent = ' S a v e  P o i n t ';
+            document.getElementById('title').textContent = ' S a v e     P o i n t  🔥 ';
             document.getElementById('title').style.fontFamily = 'monospace';
             document.getElementById('title').style.transition ='20s'
         }
