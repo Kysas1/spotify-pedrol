@@ -97,7 +97,7 @@ function initializeSong(){
             } else {
                 cover.style.width = '400px'
             }
-            document.getElementById('title').textContent = ' S a v e     P o i n t  🔥 ';
+            document.getElementById('title').textContent = ' S a v e     P o i n t  🔥悟  ';
             document.getElementById('title').style.fontFamily = 'monospace';
             document.getElementById('title').style.transition ='20s'
         }
