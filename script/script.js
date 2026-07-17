@@ -15,14 +15,14 @@ let isliked = true ;
 let daniel = {
     songName : 'HOT LIMIT' , 
     artist : 'T.M - Revolution' , 
-    file : 'T-M-Revolution-HOT-LIMIT',
+    file : 'T-M-Revolution-HOT-LIMIT.mp3',
     image: '410Xm1xMc9L._UF1000_1000_QL80_.png',
     playerName : 'Player : Daniel'
 }
 let dbgt = {
     songName : 'Dan dan kokoro hikareteku' , 
     artist : 'Field of View - Sanks' , 
-    file : 'Dragon-Ball-Dan-Dan-Kokoro-Hikareteku' ,
+    file : 'Dragon-Ball-Dan-Dan-Kokoro-Hikareteku.mp3' ,
     image : '892ab776279414977933b566575cf62d.gif' , 
     theme : 'dragon-ball' , 
     playerName : ''
@@ -30,28 +30,28 @@ let dbgt = {
 let dmc = {
     songName : 'Devils Never Cry' ,
     artist : 'Devil May Cry 3 - CAPCOM' ,
-    file : 'Devils Never Cry' , 
+    file : 'Devils Never Cry.mp3' , 
     image : 'artworks-w9hCYe774yygLUQt-zI0bPg-t1080x1080.png' , 
     playerName : 'Player : Pedro'
 }
 let katyperry = {
     songName : 'The One That Got Away',
     artist : 'Katy Perry',
-    file: 'Katy Perry - The One That Got Away',
+    file: 'Katy Perry - The One That Got Away.mp3',
     image : 'Screenshot_1.png' , 
     playerName : 'Player : Laura'
 };
 let sonic = {
     songName : 'Find your flame',
     artist : 'Sonic - Frontiers',
-    file: 'Find Your Flame',
+    file: 'Find Your Flame.mp3',
     image : 'artworks-NHp0yctCFpypTkEI-5kzxMw-t500x500.png',
     playerName : 'Player : Bruno'
 };
 let mj = {
     songName : 'Smooth Criminal',
     artist : 'Michael Jackson',
-    file: 'MICHAEL JACKSON - SMOOTH CRIMINAL',
+    file: 'MICHAEL JACKSON - SMOOTH CRIMINAL.mp3',
     image : '28f5bc624ebe2476a3fbb4ffddd9e45e6526115228fc9.png' ,
     playerName : 'Player : Fernanda'
 };
@@ -81,7 +81,7 @@ function initializeSong(){
     cover.src = `images/${playlist[index].image}`;
     songName.textContent = `${playlist[index].songName}`;
     bandName.textContent = `${playlist[index].artist}`;
-    audio.src = `songs/${playlist[index].file}.mp3`;
+    audio.src = `songs/${playlist[index].file}`;
     playerN.textContent = `${playlist[index].playerName}`
     
     document.body.classList.remove('dragon-ball')
@@ -89,14 +89,14 @@ function initializeSong(){
     cover.style.transition = '6s';
     document.getElementById('title').textContent = 'Guild Playlist'
     document.getElementById('title').style.fontFamily = 'sans-serif';
-    if (playlist[index].theme === 'dragon-ball'){
-        cover.style.transition = '18s';
-        document.body.classList.add('dragon-ball');
-        cover.style.width = '700px' ;
-        document.getElementById('title').textContent = ' S a v e  P o i n t ';
-        document.getElementById('title').style.fontFamily = 'monospace';
-        document.getElementById('title').style.transition ='20s'
-    }
+        if (playlist[index].theme === 'dragon-ball'){
+            cover.style.transition = '18s';
+            document.body.classList.add('dragon-ball');
+            cover.style.width = '700px' ;
+            document.getElementById('title').textContent = ' S a v e  P o i n t ';
+            document.getElementById('title').style.fontFamily = 'monospace';
+            document.getElementById('title').style.transition ='20s'
+        }
 }
 
 function previ(){
