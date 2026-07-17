@@ -9,6 +9,12 @@ let progress = document.getElementById('current-progress')
 let progressContainer = document.getElementById('progress-container')
 let isPlaying = false ;
 
+let dmc = {
+    songName : 'Devils Never Cry' ,
+    artist : 'Devil May Cry 3 - CAPCOM' ,
+    file : 'Devils Never Cry' , 
+    image : 'artworks-w9hCYe774yygLUQt-zI0bPg-t1080x1080'
+}
 let katyperry = {
     songName : 'The One That Got Away',
     artist : 'Katy Perry',
@@ -27,8 +33,8 @@ let mj = {
     file: 'MICHAEL JACKSON - SMOOTH CRIMINAL',
     image : '28f5bc624ebe2476a3fbb4ffddd9e45e6526115228fc9'
 };
-let playlist = [katyperry, sonic, mj];
-let index = 2;
+let playlist = [katyperry, sonic, mj , dmc];
+let index = 0;
 function playSong (){ 
     play.querySelector('.bi').classList.remove('bi-play-circle-fill');
     play.querySelector('.bi').classList.add('bi-pause-circle-fill');
