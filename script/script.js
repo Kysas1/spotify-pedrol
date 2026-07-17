@@ -135,7 +135,7 @@ function liked(){
     if (isliked === true) {
         like.querySelector('.bi').classList.remove('bi-heart');
         like.querySelector('.bi').classList.add('bi-heart-fill');
-        like.style.fontSize = '3em';
+        like.style.fontSize = '2.3em';
         like.style.color = 'white'
         like.style.transition ='1s'
         isliked = false ;
@@ -143,7 +143,7 @@ function liked(){
         like.querySelector('.bi').classList.add('bi-heart');
         like.querySelector('.bi').classList.remove('bi-heart-fill');
         isliked = true ;
-        like.style.fontSize = '2em';
+        like.style.fontSize = '1.5em';
         like.style.color = 'rgb(139,153, 156)'
         like.style.transition ='1s'
     }

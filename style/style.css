@@ -19,19 +19,22 @@ button {
     border: none;
     color: inherit;
     cursor: pointer;
+    transition: 0.6s ease-in-out;
 }
 
 .button:hover {
     font-size: 2em;
+    transition: 0.6s;
 }
 
 .button-biggest:hover {
     font-size: 5em;
-    
+    transition: 0.6s;
 }
 
 .button-navigate:hover {
     font-size: 3.5em;
+    transition: 0.6s;
 }
 
 #below-cover {
