@@ -10,6 +10,13 @@ let progressContainer = document.getElementById('progress-container')
 let playerN = document.getElementById('playerName')
 let isPlaying = false ;
 
+let daniel = {
+    songName : 'HOT LIMIT' , 
+    artist : 'T.M - Revolution' , 
+    file : 'T-M-Revolution-HOT-LIMIT',
+    image: '410Xm1xMc9L._UF1000_1000_QL80_.png',
+    playerName : 'Player : Daniel'
+}
 let dbgt = {
     songName : 'Dan dan kokoro hikareteku' , 
     artist : 'Field of View - Sanks' , 
@@ -46,7 +53,7 @@ let mj = {
     image : '28f5bc624ebe2476a3fbb4ffddd9e45e6526115228fc9.png' ,
     playerName : 'Player : Fernanda'
 };
-let playlist = [katyperry, sonic, mj , dmc , dbgt];
+let playlist = [katyperry, sonic, mj , dmc , dbgt, daniel];
 let index = 0;
 function playSong (){ 
     play.querySelector('.bi').classList.remove('bi-play-circle-fill');
