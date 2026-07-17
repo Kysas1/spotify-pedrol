@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'dbz';
+    src: url('/font/Saiyan-Sans.ttf'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     background-image: linear-gradient(
          rgba(16, 48, 77, 0.516) , rgb(16, 48, 77)

@@ -21,7 +21,7 @@ let daniel = {
 }
 let dbgt = {
     songName : 'Dan dan kokoro hikareteku' , 
-    artist : 'Field of View - Sanks' , 
+    artist : 'D r a g o n  -  B a l l ' , 
     file : 'Dragon-Ball-Dan-Dan-Kokoro-Hikareteku.mp3' ,
     image : '892ab776279414977933b566575cf62d.gif' , 
     theme : 'dragon-ball' , 
@@ -86,12 +86,14 @@ function initializeSong(){
     
     document.body.classList.remove('dragon-ball')
     cover.style.width ='400px'
-    cover.style.transition = '6s';
+    cover.style.transition = '6s ease';
     document.getElementById('title').textContent = 'Guild Playlist'
     document.getElementById('title').style.fontFamily = 'sans-serif';
+    bandName.style.fontFamily ='sans-serif'
         if (playlist[index].theme === 'dragon-ball'){
-            cover.style.transition = '18s';
+            cover.style.transition = '18s ease';
             document.body.classList.add('dragon-ball');
+            bandName.style.fontFamily = 'dbz';
             if (window.innerWidth > 768) {
                 cover.style.width = '700px' ;
             } else {
