@@ -18,6 +18,21 @@ button {
     cursor: pointer;
 }
 
+.button:hover {
+    font-size: 2em;
+}
+
+.button-biggest:hover {
+    font-size: 5em;
+    
+}
+
+.button-navigate:hover {
+    font-size: 3.5em;
+}
+
+
+
 #below-cover {
     display: flex;
     flex-direction: row;
