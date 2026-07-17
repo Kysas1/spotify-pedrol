@@ -92,7 +92,11 @@ function initializeSong(){
         if (playlist[index].theme === 'dragon-ball'){
             cover.style.transition = '18s';
             document.body.classList.add('dragon-ball');
-            cover.style.width = '700px' ;
+            if (window.innerWidth > 768) {
+                cover.style.width = '700px' ;
+            } else {
+                cover.style.width = '400px'
+            }
             document.getElementById('title').textContent = ' S a v e     P o i n t  🔥 ';
             document.getElementById('title').style.fontFamily = 'monospace';
             document.getElementById('title').style.transition ='20s'
