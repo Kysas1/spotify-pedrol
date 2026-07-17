@@ -78,6 +78,7 @@ function initializeSong(){
     document.body.classList.remove('dragon-ball')
     cover.style.width ='400px'
     cover.style.transition = '6s';
+    document.getElementById('title').textContent = 'Guild Playlist'
     if (playlist[index].theme === 'dragon-ball'){
         document.body.classList.add('dragon-ball');
         cover.style.width = '700px' ;
