@@ -8,7 +8,9 @@ let prev = document.getElementById('prev')
 let progress = document.getElementById('current-progress')
 let progressContainer = document.getElementById('progress-container')
 let playerN = document.getElementById('playerName')
+let like = document.getElementById('like');
 let isPlaying = false ;
+let isliked = true ;
 
 let daniel = {
     songName : 'HOT LIMIT' , 
@@ -86,11 +88,14 @@ function initializeSong(){
     cover.style.width ='400px'
     cover.style.transition = '6s';
     document.getElementById('title').textContent = 'Guild Playlist'
+    document.getElementById('title').style.fontFamily = 'sans-serif';
     if (playlist[index].theme === 'dragon-ball'){
+        cover.style.transition = '18s';
         document.body.classList.add('dragon-ball');
         cover.style.width = '700px' ;
-        cover.style.transition = '18s';
-        document.getElementById('title').textContent = 'Save Point';
+        document.getElementById('title').textContent = ' S a v e  P o i n t ';
+        document.getElementById('title').style.fontFamily = 'monospace';
+        document.getElementById('title').style.transition ='20s'
     }
 }
 
@@ -126,6 +131,24 @@ function jumpTo(event){
     audio.currentTime = jumpTotime;
     progressContainer.style.cursor = 'pointer';
 }
+function liked(){
+    if (isliked === true) {
+        like.querySelector('.bi').classList.remove('bi-heart');
+        like.querySelector('.bi').classList.add('bi-heart-fill');
+        like.style.fontSize = '3em';
+        like.style.color = 'white'
+        like.style.transition ='1s'
+        isliked = false ;
+    } else {
+        like.querySelector('.bi').classList.add('bi-heart');
+        like.querySelector('.bi').classList.remove('bi-heart-fill');
+        isliked = true ;
+        like.style.fontSize = '2em';
+        like.style.color = 'rgb(139,153, 156)'
+        like.style.transition ='1s'
+    }
+    
+}
 
 initializeSong();
 progressContainer.addEventListener('click', jumpTo);
@@ -133,6 +156,7 @@ play.addEventListener('click', playpauseDecider);
 prev.addEventListener('click' , previ);
 next.addEventListener('click', nextS);
 audio.addEventListener('timeupdate', progressBar);
+like.addEventListener('click', liked);
 
 
 
